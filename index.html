@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Stephanie Marie Dominguez | Early Childhood Education & Child Development</title>
-  <meta name="description" content="Early Childhood Education & Child Development — practical, inclusive strategies and resources for families, students, and educators in the Rio Grande Valley." />
 
   <style>
     body{
@@ -15,7 +14,7 @@
       color: #222;
     }
 
-    /* Side background panels (not behind text) */
+    /* Side handprint background */
     body::before,
     body::after{
       content: "";
@@ -33,7 +32,7 @@
     body::before{ left: 0; }
     body::after{ right: 0; }
 
-    /* White readable content area */
+    /* Main content box */
     .content{
       position: relative;
       z-index: 1;
@@ -45,16 +44,41 @@
       box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
-    header h1{ margin: 0 0 6px 0; font-size: 2rem; }
-    .subtitle{ margin: 0; color: #555; font-weight: 600; }
+    /* Header with profile image */
+    .header-top{
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 10px;
+    }
+
+    .profile-photo{
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #e6e6e6;
+    }
+
+    header h1{
+      margin: 0;
+      font-size: 2rem;
+    }
+
+    .subtitle{
+      margin: 0;
+      color: #555;
+      font-weight: 600;
+    }
 
     nav{
-      margin: 16px 0 26px;
+      margin: 18px 0 26px;
       padding: 12px 14px;
       border: 1px solid #e6e6e6;
       border-radius: 10px;
       background: #fafafa;
     }
+
     nav a{
       margin-right: 12px;
       text-decoration: none;
@@ -62,34 +86,27 @@
       color: #1a1a1a;
       white-space: nowrap;
     }
+
     nav a:hover{ text-decoration: underline; }
 
     .callout{
       border-left: 5px solid #f0c36d;
       background: #fff7e6;
-      padding: 14px 14px;
+      padding: 14px;
       border-radius: 10px;
       margin: 18px 0;
     }
 
     .section{ margin: 28px 0; }
-    h2{ margin: 0 0 10px; font-size: 1.35rem; }
-    h3{ margin: 0 0 8px; font-size: 1.08rem; }
 
-    .two-col{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-    }
-    @media (min-width: 820px){
-      .two-col{ grid-template-columns: 1fr 1fr; }
-    }
+    h2{ margin-bottom: 10px; }
 
     .card{
       border: 1px solid #e6e6e6;
       border-radius: 12px;
       padding: 14px;
       background: #fff;
+      margin-bottom: 12px;
     }
 
     .tag{
@@ -102,232 +119,128 @@
       font-size: 0.95rem;
     }
 
-    /* simple “logo” bubble */
-    .logo{
-      display:inline-flex;
-      align-items:center;
-      justify-content:center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      border: 1px solid #e6e6e6;
-      background: #fafafa;
-      margin-right: 8px;
-      font-weight: 700;
-      font-size: 0.9rem;
-      color: #444;
-      flex: 0 0 auto;
-    }
-    .roleline{ display:flex; gap:10px; align-items:flex-start; }
-    .roleline p{ margin:0; }
-
     footer{
       margin-top: 36px;
       padding-top: 14px;
       border-top: 1px solid #eee;
       color: #666;
       font-size: 0.95rem;
+      text-align: center;
     }
 
-    /* Mobile: hide side background so it doesn’t crowd */
+    /* Mobile adjustments */
     @media (max-width: 900px){
-      body::before, body::after{ display: none; }
+      body::before,
+      body::after{ display: none; }
       .content{ margin: 18px 12px; }
+      .header-top{ flex-direction: column; text-align: center; }
     }
   </style>
 </head>
 
 <body>
   <div class="content">
+
     <header>
-      <h1>Stephanie Marie Dominguez</h1>
-      <p class="subtitle">Early Childhood Education &amp; Child Development</p>
+      <div class="header-top">
+        <img src="profile.jpeg" alt="Photo of Stephanie Marie Dominguez" class="profile-photo">
+        <div>
+          <h1>Stephanie Marie Dominguez</h1>
+          <p class="subtitle">Early Childhood Education &amp; Child Development</p>
+        </div>
+      </div>
 
       <nav>
-        <a href="#start">Start Here</a>
         <a href="#about">About</a>
-        <a href="#trust">Highlights & Experience</a>
-        <a href="#focus">What I Focus On</a>
-        <a href="#impact">Impact</a>
-        <a href="#support">Support Organizations</a>
+        <a href="#focus">Focus</a>
+        <a href="#experience">Experience</a>
+        <a href="#support">Support</a>
         <a href="#youtube">YouTube</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <section class="callout" id="start">
-      🌟 <strong>Welcome!</strong> I’m Stephanie — a Brownsville-based professional with a <strong>B.S. in Psychology</strong> and a <strong>minor in Early Childhood Education (UTRGV)</strong>.
-      I share practical, people-centered ideas for supporting young learners through inclusive, developmentally appropriate practices.
-    </section>
-
-    <section class="section">
-      <h2>What you’ll find here</h2>
-      <ul>
-        <li>✅ Simple strategies you can use right away</li>
-        <li>🧩 Real-world experience from student services and community settings</li>
-        <li>🤍 Inclusive approaches that support different needs and strengths</li>
-        <li>📌 Resources for families, students, and educators</li>
-      </ul>
+    <section class="callout">
+      🌟 Welcome! I’m Stephanie — a Brownsville-based professional with a <strong>B.S. in Psychology</strong>
+      and a <strong>minor in Early Childhood Education (UTRGV)</strong>. I share practical, inclusive,
+      developmentally appropriate ideas for supporting young learners.
     </section>
 
     <section class="section" id="about">
-      <h2>About</h2>
-      <p><strong>My name is Stephanie Marie Dominguez.</strong> I’m passionate about child development, early intervention, prevention-oriented support, and building learning environments where every child feels safe, seen, and supported.</p>
-
-      <div class="card">
-        <h3>My “Who / What / When / Where / Why”</h3>
-        <ul>
-          <li><strong>Who:</strong> Stephanie Marie Dominguez</li>
-          <li><strong>What:</strong> A website to highlight the importance of Early Childhood Education &amp; Child Development and share practical support</li>
-          <li><strong>When:</strong> Starting today — because change starts with consistency</li>
-          <li><strong>Where:</strong> Brownsville + the entire Rio Grande Valley</li>
-          <li><strong>Why:</strong> ECE &amp; Child Development are undervalued, yet they shape our world by supporting children early</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section" id="trust">
-      <h2>Highlights & Experience</h2>
-
-      <div class="two-col">
-        <div class="card">
-          <h3>✨ Quick professional highlights</h3>
-          <ul>
-            <li>🎓 B.S. in Psychology + minor in Early Childhood Education (UTRGV)</li>
-            <li>🧾 Background in student services & accessibility support</li>
-            <li>🗂 Strong skills in communication, documentation, and multitasking</li>
-            <li>💛 Interest in SEL, inclusive practices, early intervention & prevention</li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>🧩 Experience that shaped my approach</h3>
-
-          <div class="roleline" style="margin-bottom:10px;">
-            <span class="logo">U</span>
-            <p>🏫 <strong>UTRGV | Student Accessibility Services (Work-Study Assistant):</strong><br/>
-              Supported accessibility services, documentation, and student communication.</p>
-          </div>
-
-          <div class="roleline" style="margin-bottom:10px;">
-            <span class="logo">T</span>
-            <p>📄 <strong>Texas Southmost College | Admissions &amp; Records (Student Worker):</strong><br/>
-              Supported enrollment services, appointments, and student records.</p>
-          </div>
-
-          <div class="roleline" style="margin-bottom:10px;">
-            <span class="logo">S</span>
-            <p>🗓 <strong>St. Mary’s Catholic Church (Brownsville) | Office Assistant:</strong><br/>
-              Supported office organization and helped coordinate events.</p>
-          </div>
-
-          <div class="roleline">
-            <span class="logo">V</span>
-            <p>🤝 <strong>St. Mary’s Catholic Church (Brownsville) | Volunteer (1 month):</strong><br/>
-              Supported church initiatives and community needs.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="card" style="margin-top:12px;">
-        <h3>📌 What I learned</h3>
-        <ul>
-          <li>Kids do better when adults build warm relationships and predictable routines.</li>
-          <li>Inclusion works best when supports are proactive, strengths-based, and consistent.</li>
-          <li>Early support can reduce bigger challenges later by building skills early.</li>
-        </ul>
-      </div>
+      <h2>About Me</h2>
+      <p>
+        My name is Stephanie Marie Dominguez. I’m passionate about child development, early intervention,
+        prevention-oriented support, and building environments where every child feels safe, seen, and supported.
+      </p>
     </section>
 
     <section class="section" id="focus">
       <h2>What I Focus On</h2>
-      <p class="callout" style="border-left-color:#ffd1dc; background:#fff;">
-        💛 Action areas I care about and build content around:
-      </p>
-
       <span class="tag">Early childhood development</span>
-      <span class="tag">Social-emotional learning (SEL)</span>
-      <span class="tag">Inclusive classroom supports</span>
+      <span class="tag">Social-emotional learning</span>
+      <span class="tag">Inclusive classroom practices</span>
       <span class="tag">Early intervention & prevention</span>
       <span class="tag">Family & community engagement</span>
     </section>
 
-    <section class="section" id="impact">
-      <h2>Impact</h2>
+    <section class="section" id="experience">
+      <h2>Experience That Shaped My Approach</h2>
 
-      <div class="two-col">
-        <div class="card">
-          <h3>⭐ People I’ve personally helped</h3>
-          <p>Add short, private-friendly examples (no full names if you don’t want).</p>
-          <ul>
-            <li>[Example: Supported a student by helping them understand accommodation steps]</li>
-            <li>[Example: Helped a family find a local resource / referral]</li>
-            <li>[Example: Assisted with documentation and follow-up communication]</li>
-          </ul>
-        </div>
+      <div class="card">
+        🎓 <strong>UTRGV – Student Accessibility Services</strong><br>
+        Supported accessibility documentation, student communication, and inclusive support services.
+      </div>
 
-        <div class="card">
-          <h3>⭐ Testimony / quote</h3>
-          <p>You can paste a short quote here (with permission). Keep it simple.</p>
-          <blockquote style="margin:10px 0; padding-left:12px; border-left:4px solid #eee;">
-            “[Add a 1–2 sentence testimonial here.]”
-          </blockquote>
-          <p><em>— [First name, role (optional)]</em></p>
-        </div>
+      <div class="card">
+        📄 <strong>Texas Southmost College – Admissions & Records</strong><br>
+        Supported enrollment services, scheduling, and student records.
+      </div>
+
+      <div class="card">
+        🤝 <strong>St. Mary’s Catholic Church (Brownsville)</strong><br>
+        Office assistant and volunteer supporting organization, events, and community needs.
       </div>
     </section>
 
     <section class="section" id="support">
-      <h2>Support Organizations (Brownsville + RGV)</h2>
-      <p>If you’d like to support families and children in our community, here are a few places to start:</p>
-
-      <div class="two-col">
-        <div class="card">
-          <h3>📍 Brownsville</h3>
-          <ul>
-            <li><a href="https://www.goodneighborsettlement.org/" target="_blank">Good Neighbor Settlement House</a></li>
-            <li><a href="https://casaofcameronandwillacy.org/" target="_blank">CASA of Cameron &amp; Willacy Counties</a></li>
-            <li><a href="https://www.proyecto-jd.org/" target="_blank">Proyecto Juan Diego</a></li>
-            <li><a href="https://www.totfo.org/home" target="_blank">Tip of Texas Family Outreach</a></li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <h3>🌎 Across the RGV (keep it simple)</h3>
-          <ul>
-            <li><a href="https://foodbankrgv.com/" target="_blank">Food Bank of the Rio Grande Valley</a></li>
-            <li><a href="https://catholiccharitiesrgv.org/" target="_blank">Catholic Charities RGV</a></li>
-            <li><a href="https://ariseadelante.org/" target="_blank">ARISE Adelante</a></li>
-            <li><a href="https://unitedwayofsotx.org/" target="_blank">United Way of South Texas</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <p style="margin-top:14px;"><strong>A hopeful reminder:</strong> strong foundations support big futures.</p>
+      <h2>Support Organizations (RGV)</h2>
+      <ul>
+        <li><a href="https://www.goodneighborsettlement.org/" target="_blank">Good Neighbor Settlement House</a></li>
+        <li><a href="https://casaofcameronandwillacy.org/" target="_blank">CASA of Cameron & Willacy Counties</a></li>
+        <li><a href="https://www.proyecto-jd.org/" target="_blank">Proyecto Juan Diego</a></li>
+        <li><a href="https://foodbankrgv.com/" target="_blank">Food Bank of the Rio Grande Valley</a></li>
+      </ul>
     </section>
 
     <section class="section" id="youtube">
-      <h2>YouTube (learning + family-friendly)</h2>
+      <h2>YouTube – Learning & Awareness</h2>
       <ul>
-        <li>📺 <a href="https://www.youtube.com/@CDC" target="_blank">CDC (child development + health)</a></li>
-        <li>🧠 <a href="https://www.youtube.com/@HarvardUniversity" target="_blank">Harvard (developing child topics + research)</a></li>
-        <li>📚 <a href="https://www.youtube.com/@ReadingRockets" target="_blank">Reading Rockets (early literacy)</a></li>
-        <li>👶 <a href="https://www.youtube.com/@zerotothree" target="_blank">ZERO TO THREE (early childhood resources)</a></li>
+        <li>
+          📺 <a href="https://youtu.be/0-29c0hbcfE" target="_blank">
+          Early Childhood Education & Child Development Video
+          </a>
+        </li>
+        <li>
+          📺 <a href="https://youtu.be/W42vlbhDDU0" target="_blank">
+          Why Early Childhood Education Matters
+          </a>
+        </li>
       </ul>
     </section>
 
     <section class="section" id="contact">
       <h2>Contact</h2>
-      <p>📩 Email: <strong>your-professional-email-here</strong></p>
+      <p>📧 Email: <strong>your-professional-email-here</strong></p>
     </section>
 
     <footer>
-      © <span id="year"></span> Stephanie Marie Dominguez · Brownsville, TX · Early Childhood Education &amp; Child Development
+      © <span id="year"></span> Stephanie Marie Dominguez · Early Childhood Education & Child Development
     </footer>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
   </div>
 </body>
 </html>
