@@ -128,6 +128,42 @@
       text-align: center;
     }
 
+    /* Video embeds */
+    .video-grid{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 14px;
+    }
+
+    .video-card{
+      border: 1px solid #e6e6e6;
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .video-title{
+      margin: 0 0 10px;
+      font-weight: 700;
+    }
+
+    .video-embed{
+      position: relative;
+      width: 100%;
+      padding-top: 56.25%; /* 16:9 */
+      border-radius: 12px;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-embed iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
     /* Mobile adjustments */
     @media (max-width: 900px){
       body::before,
@@ -205,27 +241,65 @@
     <section class="section" id="support">
       <h2>Support Organizations (RGV)</h2>
       <ul>
-        <li><a href="https://www.goodneighborsettlement.org/" target="_blank">Good Neighbor Settlement House</a></li>
-        <li><a href="https://casaofcameronandwillacy.org/" target="_blank">CASA of Cameron & Willacy Counties</a></li>
-        <li><a href="https://www.proyecto-jd.org/" target="_blank">Proyecto Juan Diego</a></li>
-        <li><a href="https://foodbankrgv.com/" target="_blank">Food Bank of the Rio Grande Valley</a></li>
+        <li><a href="https://www.goodneighborsettlement.org/" target="_blank" rel="noopener noreferrer">Good Neighbor Settlement House</a></li>
+        <li><a href="https://casaofcameronandwillacy.org/" target="_blank" rel="noopener noreferrer">CASA of Cameron & Willacy Counties</a></li>
+        <li><a href="https://www.proyecto-jd.org/" target="_blank" rel="noopener noreferrer">Proyecto Juan Diego</a></li>
+        <li><a href="https://foodbankrgv.com/" target="_blank" rel="noopener noreferrer">Food Bank of the Rio Grande Valley</a></li>
       </ul>
     </section>
 
     <section class="section" id="youtube">
-      <h2>YouTube – Learning & Awareness</h2>
-      <ul>
-        <li>
-          📺 <a href="https://youtu.be/0-29c0hbcfE" target="_blank">
-          Early Childhood Education & Child Development Video
-          </a>
-        </li>
-        <li>
-          📺 <a href="https://youtu.be/W42vlbhDDU0" target="_blank">
-          Why Early Childhood Education Matters
-          </a>
-        </li>
-      </ul>
+      <h2>YouTube – Learning &amp; Awareness</h2>
+
+      <!-- Embedded Episodes -->
+      <div class="video-grid">
+
+        <div class="video-card">
+          <p class="video-title">Episode 1</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/HFrUlWXkn4k"
+              title="Episode 1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>
+            🔗 <a href="https://youtu.be/HFrUlWXkn4k?si=9QMGTCS8uf_aFxIR" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+          </p>
+        </div>
+
+        <div class="video-card">
+          <p class="video-title">Episode 2</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/lJLm5F5nAJM"
+              title="Episode 2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>
+            🔗 <a href="https://youtu.be/lJLm5F5nAJM?si=FlEPBjSjH9yQU8js" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+          </p>
+        </div>
+
+        <div class="video-card">
+          <p class="video-title">Episode 3</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/I1zuiy4WjK"
+              title="Episode 3"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>
+            🔗 <a href="https://youtu.be/I1zuiy4WjKk?si=R0yeyK_tK2XWCBvM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+          </p>
+        </div>
+
+      </div>
     </section>
 
     <section class="section" id="contact">
