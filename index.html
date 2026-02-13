@@ -85,6 +85,8 @@
       font-weight: 600;
       color: #1a1a1a;
       white-space: nowrap;
+      display: inline-block;
+      padding: 4px 0;
     }
 
     nav a:hover{ text-decoration: underline; }
@@ -117,15 +119,6 @@
       border-radius: 999px;
       background: #ffffff;
       font-size: 0.95rem;
-    }
-
-    footer{
-      margin-top: 36px;
-      padding-top: 14px;
-      border-top: 1px solid #eee;
-      color: #666;
-      font-size: 0.95rem;
-      text-align: center;
     }
 
     /* Video embeds */
@@ -164,12 +157,22 @@
       border: 0;
     }
 
+    footer{
+      margin-top: 36px;
+      padding-top: 14px;
+      border-top: 1px solid #eee;
+      color: #666;
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
     /* Mobile adjustments */
     @media (max-width: 900px){
       body::before,
       body::after{ display: none; }
       .content{ margin: 18px 12px; }
       .header-top{ flex-direction: column; text-align: center; }
+      nav{ overflow-x: auto; white-space: nowrap; }
     }
   </style>
 </head>
@@ -251,7 +254,6 @@
     <section class="section" id="youtube">
       <h2>YouTube – Learning &amp; Awareness</h2>
 
-      <!-- Embedded Episodes -->
       <div class="video-grid">
 
         <div class="video-card">
@@ -264,9 +266,7 @@
               allowfullscreen>
             </iframe>
           </div>
-          <p>
-            🔗 <a href="https://youtu.be/HFrUlWXkn4k?si=9QMGTCS8uf_aFxIR" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-          </p>
+          <p>🔗 <a href="https://youtu.be/HFrUlWXkn4k?si=9QMGTCS8uf_aFxIR" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
         </div>
 
         <div class="video-card">
@@ -279,9 +279,7 @@
               allowfullscreen>
             </iframe>
           </div>
-          <p>
-            🔗 <a href="https://youtu.be/lJLm5F5nAJM?si=FlEPBjSjH9yQU8js" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-          </p>
+          <p>🔗 <a href="https://youtu.be/lJLm5F5nAJM?si=FlEPBjSjH9yQU8js" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
         </div>
 
         <div class="video-card">
@@ -294,9 +292,33 @@
               allowfullscreen>
             </iframe>
           </div>
-          <p>
-            🔗 <a href="https://youtu.be/I1zuiy4WjKk?si=R0yeyK_tK2XWCBvM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-          </p>
+          <p>🔗 <a href="https://youtu.be/I1zuiy4WjKk?si=R0yeyK_tK2XWCBvM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        </div>
+
+        <div class="video-card">
+          <p class="video-title">Why Early Childhood Education Matters</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/W42vlbhDDU0"
+              title="Why Early Childhood Education Matters"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>🔗 <a href="https://youtu.be/W42vlbhDDU0" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        </div>
+
+        <div class="video-card">
+          <p class="video-title">Early Childhood Education &amp; Child Development Video</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/0-29c0hbcfE"
+              title="Early Childhood Education & Child Development Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>🔗 <a href="https://youtu.be/0-29c0hbcfE" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
         </div>
 
       </div>
