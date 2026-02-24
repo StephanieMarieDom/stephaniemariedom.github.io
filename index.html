@@ -39,22 +39,22 @@
       color: var(--text);
     }
 
-    /* Side handprint background */
+    /* Side handprint background (more visible) */
     body::before,
     body::after{
       content: "";
       position: fixed;
       top: 0;
-      width: 240px;
+      width: 300px;
       height: 100vh;
       background-image: url("handprints.png");
       background-repeat: repeat-y;
       background-position: top center;
-      background-size: contain;
+      background-size: 220px auto; /* makes pattern larger & easier to see */
       z-index: 0;
       pointer-events: none;
-      opacity: 0.22;
-      filter: saturate(1.1);
+      opacity: 0.48; /* stronger */
+      filter: saturate(1.2) contrast(1.05);
     }
     body::before{ left: 0; }
     body::after{ right: 0; }
@@ -154,7 +154,7 @@
     }
 
     nav a{
-      margin-right: 12px;
+      margin-right: 10px;
       text-decoration: none;
       font-weight: 800;
       color: #1a1a1a;
@@ -198,13 +198,6 @@
       background: var(--card);
       margin-bottom: 12px;
       box-shadow: 0 6px 14px rgba(0,0,0,0.06);
-    }
-
-    .two-col{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      align-items: start;
     }
 
     .tag{
@@ -344,7 +337,6 @@
       .content{ margin: 18px 12px; }
       .header-top{ flex-direction: column; text-align: center; }
       nav{ overflow-x: auto; white-space: nowrap; }
-      .two-col{ grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -372,7 +364,8 @@
       </div>
 
       <div class="btn-row" style="margin-top:14px;">
-        <a class="btn" href="#videos">🎥 Videos (Not Mine)</a>
+        <a class="btn" href="#myvideos">🎬 My Videos</a>
+        <a class="btn" href="#learnvideos">📺 Videos I Recommend</a>
         <a class="btn" href="#certs">✅ Certifications</a>
         <a class="btn" href="#resources">📚 Resources</a>
         <a class="btn" href="#contact">💌 Contact</a>
@@ -380,50 +373,35 @@
     </div>
 
     <nav>
+      <a href="#myvideos">🎬 My Videos</a>
+      <a href="#learnvideos">📺 Recommended Videos</a>
       <a href="#about">✨ About</a>
       <a href="#focus">🎯 Focus</a>
       <a href="#experience">🧩 Experience</a>
       <a href="#certs">✅ Certifications</a>
       <a href="#support">🤝 Support</a>
       <a href="#resources">📚 Resources</a>
-      <a href="#videos">🎥 Videos</a>
       <a href="#contact">💌 Contact</a>
     </nav>
 
     <section class="callout">
       🌟 Welcome! I’m Stephanie — a Brownsville-based professional with a <strong>B.S. in Psychology</strong>
       and a <strong>minor in Early Childhood Education (UTRGV)</strong>. I’m not a certified teacher yet,
-      but I’m actively working toward becoming a <strong>PreK–3 educator</strong> and sharing learning-friendly,
-      developmentally appropriate ideas along the way. 💛📚
+      but I’m actively working toward becoming a <strong>PreK–3 educator</strong> 💛📚
     </section>
 
-    <!-- VIDEOS ON TOP (AND CLEARLY NOT YOURS) -->
-    <section class="section" id="videos">
-      <h2>🎥 Videos I’m Learning From (Not Created by Me)</h2>
+    <!-- YOUR VIDEOS (TOP) -->
+    <section class="section" id="myvideos">
+      <h2>🎬 My Videos</h2>
       <p class="subnote">
-        These videos are here for learning and inspiration only 💡 — they are <strong>not made by me</strong>.
-        I’m sharing them because they help me grow and understand early childhood education better.
+        These are <strong>my videos</strong> ✅ — created and posted by me.
       </p>
 
       <div class="video-grid">
 
         <div class="video-card">
-          <p class="video-title">⭐ Why Early Childhood Education Matters</p>
-          <p class="video-note">Not my video — shared for learning.</p>
-          <div class="video-embed">
-            <iframe
-              src="https://www.youtube.com/embed/W42vlbhDDU0"
-              title="Why Early Childhood Education Matters"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen>
-            </iframe>
-          </div>
-          <p>🔗 <a href="https://youtu.be/W42vlbhDDU0" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
-        </div>
-
-        <div class="video-card">
           <p class="video-title">Episode 1</p>
-          <p class="video-note">Not my video — shared for learning.</p>
+          <p class="video-note">✅ My video</p>
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/HFrUlWXkn4k"
@@ -437,7 +415,7 @@
 
         <div class="video-card">
           <p class="video-title">Episode 2</p>
-          <p class="video-note">Not my video — shared for learning.</p>
+          <p class="video-note">✅ My video</p>
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/lJLm5F5nAJM"
@@ -451,7 +429,7 @@
 
         <div class="video-card">
           <p class="video-title">Episode 3</p>
-          <p class="video-note">Not my video — shared for learning.</p>
+          <p class="video-note">✅ My video</p>
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/I1zuiy4WjKk"
@@ -464,8 +442,22 @@
         </div>
 
         <div class="video-card">
+          <p class="video-title">Why Early Childhood Education Matters</p>
+          <p class="video-note">✅ My video</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/W42vlbhDDU0"
+              title="Why Early Childhood Education Matters"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>🔗 <a href="https://youtu.be/W42vlbhDDU0" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        </div>
+
+        <div class="video-card">
           <p class="video-title">Early Childhood Education &amp; Child Development Video</p>
-          <p class="video-note">Not my video — shared for learning.</p>
+          <p class="video-note">✅ My video</p>
           <div class="video-embed">
             <iframe
               src="https://www.youtube.com/embed/0-29c0hbcfE"
@@ -475,6 +467,74 @@
             </iframe>
           </div>
           <p>🔗 <a href="https://youtu.be/0-29c0hbcfE" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEW RECOMMENDED VIDEOS (NOT YOURS) -->
+    <section class="section" id="learnvideos">
+      <h2>📺 Recommended Videos (Not Made by Me)</h2>
+      <p class="subnote">
+        These are videos I’m learning from 💡 — they are <strong>NOT created by me</strong>. I’m sharing them as helpful resources only.
+      </p>
+
+      <div class="video-grid">
+
+        <div class="video-card">
+          <p class="video-title">🌟 Developmentally Appropriate Practice (DAP) – What It Means</p>
+          <p class="video-note">🚫 Not my video — shared for learning.</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/JF8DzGPjPtw"
+              title="What Is Developmentally Appropriate Practice (DAP)?"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>🔗 <a href="https://www.youtube.com/watch?v=JF8DzGPjPtw" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        </div>
+
+        <div class="video-card">
+          <p class="video-title">🧩 Classroom Management Strategies (Early Childhood)</p>
+          <p class="video-note">🚫 Not my video — shared for learning.</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/ySOgtwlLy1w"
+              title="Classroom Management Strategies Early Childhood"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>🔗 <a href="https://www.youtube.com/watch?v=ySOgtwlLy1w" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        </div>
+
+        <div class="video-card">
+          <p class="video-title">💛 What is SEL (Social-Emotional Learning)?</p>
+          <p class="video-note">🚫 Not my video — shared for learning.</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/Y-XNp3h3h4A"
+              title="What is Social and Emotional Learning (SEL)?"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>🔗 <a href="https://www.youtube.com/watch?v=Y-XNp3h3h4A" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
+        </div>
+
+        <div class="video-card">
+          <p class="video-title">🔤 Phonological Awareness (Preschool / Early Learners)</p>
+          <p class="video-note">🚫 Not my video — shared for learning.</p>
+          <div class="video-embed">
+            <iframe
+              src="https://www.youtube.com/embed/k03eLoGO0u4"
+              title="Phonological Awareness Preschool"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <p>🔗 <a href="https://www.youtube.com/watch?v=k03eLoGO0u4" target="_blank" rel="noopener noreferrer">Watch on YouTube</a></p>
         </div>
 
       </div>
@@ -530,7 +590,7 @@
               Certified in CPR and First Aid — focused on safety, readiness, and caring support. ✅
             </p>
             <p style="margin:0; color:#666;">
-              (Tip: If your certificate includes an ID number you don’t want public, you can blur it before uploading.)
+              (If your certificate shows a credential ID you don’t want public, you can blur it before uploading.)
             </p>
           </div>
         </div>
@@ -547,10 +607,10 @@
       </ul>
     </section>
 
-    <!-- RESOURCES SECTION (NEW) -->
+    <!-- RESOURCES SECTION -->
     <section class="section" id="resources">
       <h2>📚 Helpful Early Childhood Resources</h2>
-      <p class="subnote">These are trusted places to learn more, find classroom ideas, and grow professionally 🌟</p>
+      <p class="subnote">Trusted places to learn more, find classroom ideas, and grow professionally 🌟</p>
 
       <div class="resource-grid">
 
